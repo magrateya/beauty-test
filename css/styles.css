@@ -1,0 +1,579 @@
+:root {
+	--sand-color: #0f0f0f;
+	--contacts-text: #dcdcdc;
+	--gold-text-color: #e7c127;
+	--burger-cross: #0f0f0f;
+	--text-nav-current-bg-menu: #333333;
+	--video-button: #e6e5e4;
+	--socio-border: #8d8b8b;
+	--close-cross: #ececec;
+	--text-color: #918f8f;
+	--big-arrow-border: #939393;
+	--small-arrow-border: #e8e8e8;
+	--progress-no-active: #eeeeee;
+	--progress-text-no-active: #a7a5a5;
+	--icons-no-active: #adadad;
+	--gold-color: rgb(231, 193, 39);
+} 
+
+html {
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+p {
+	margin: 0;
+}
+img {
+	display: block;
+	/* max-width: 100%; */
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+body {
+	margin: 0;
+	font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+section {
+	max-width: 1910px;
+	margin: 0 auto;
+}
+.container {
+	max-width: 1500px;
+	width: 100%;
+	height: 100%;
+	padding: 0 15px 0 15px;
+	margin: 0 auto 0 auto;
+}
+
+/*шапка*/
+header {
+	position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+    max-width: 1910px;
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+header .container {
+	display: flex;
+	align-items: center;
+	padding: 10px 15px;
+}
+
+.sand-link {
+	display: inline-block;
+	height: 25px;
+	margin-right: 130px;
+	z-index: 9;
+}
+.sand {
+	/*position: relative;*/
+	display: inline-block;
+	width: 33px;
+	height: 2px;
+	background: var(--sand-color);
+
+	transition: transform 250ms;
+}
+.sand:before,
+.sand:after {
+
+	/*position: absolute;*/
+	display: block;
+	content:"";
+	width: 33px;
+	height: 2px;
+	background: var(--sand-color);
+	display: block;
+}
+.sand:before {
+	margin-top: 9px;
+}
+.sand:after {
+	margin-top: -20px;
+}
+.sand-link:hover .sand:before {
+	transform: rotate(90deg) translateX(-9px);
+	top: 0;
+	background-color: #fff;
+}
+.sand-link:hover .sand {
+	transform: rotate(-45deg);
+	top: 50%;
+	background-color: #fff;
+}
+.sand-link:hover .sand:after {
+	opacity: 0;
+}
+
+.menu-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateX(-100%);
+	opacity: 0;
+	width: 745px;
+	height: 1080px;
+	background-color: var(--text-nav-current-bg-menu);
+}
+.menu-container nav {
+	width: 100%;
+	height: 100%;
+}
+.sand-link:hover + .menu-container {
+	transform: translateX(0);
+	opacity: 1;
+}
+.nav-list {
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font: 300 32px/3.13 "Montserrat", sans-serif;
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+}
+.nav-list-item:hover {
+	color: var(--gold-text-color);
+	font-weight: 700;
+}
+
+.logo-link {
+	display: inline-block;
+	margin-right: 466px;
+}
+
+.contacts {
+	display: flex;
+	margin-right: 104px;
+	font: 100 16px/0.586 "Montserrat", sans-serif;
+	color: var(--contacts-text);
+	/*color: rgb(255, 255, 255);*/
+}
+
+.contacts > li:not(:last-child){
+	margin-right: 24px;
+}
+
+.contacts-tell {
+	display: flex;
+	align-items: center;
+	font: 700 20px/0.469 "Montserrat", sans-serif;
+	color: var(--gold-text-color);
+	/*color: rgb(231, 193, 39);*/
+}
+
+.lang-item-main {
+	position: relative;
+}
+
+.lang-item-main:after {
+	content: '';
+	display: block;
+	background-image: url(../img/arrow-down.svg);
+	background-repeat: no-repeat;
+	-webkit-background-size: 12px 7px;
+	background-size: 12px 7px;
+}
+.lang-sub {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 100%;
+	opacity: 0;
+}
+.lang-item-main:hover .lang-sub{
+	opacity: 1;
+}
+
+
+
+/*герой*/
+
+.hero {
+  position: relative;
+  max-width: 1910px;
+  /*min-height: 100vh;*/
+  height: 1080px;
+  margin: 0 auto 0 auto;
+}
+.hero-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.hero-thumb {
+	position: absolute;
+	right: 0;
+}
+.hero-thumb img {
+	filter: brightness(0.45);
+}
+.hero-title-spec {
+	position: absolute;
+	left: -110px;
+	top: 230px;
+	transform: rotate(90deg) translate(50%, 50%);
+	text-transform: uppercase;
+	font-size: 120px;
+	line-height: 1.2;
+	font-weight: 900;
+	color: #f1f1f1;
+}
+.hero-title-spec:after {
+	content: '';
+	position: absolute;
+    bottom: 440px;
+   	display: block;
+	width: 500px;
+	height: 340px;
+	background-color: #f1f1f1;
+	opacity: 0.588;
+}
+.hero-title:before{
+	content: '';
+	position: absolute;
+    bottom: 105%;
+    left: 40px;
+	display: block;
+	width: 2px;
+	height: 129px;
+	/*background-color: var(--text-nav-current);*/
+	background-color: rgb(51, 51, 51);
+}
+.hero-title:after {
+	content: '';
+	position: absolute;
+    top: 128%;
+    left: 40px;
+	display: block;
+	width: 2px;
+	height: 212px;
+	/*background-color: var(--text-nav-current);*/
+	background-color: rgb(51, 51, 51);
+}
+
+.hero-title {
+	position: absolute;
+	left: 150px;
+	max-width: 550px;
+	font-size: 122px;
+	font-weight: 300;
+	color: rgb(51, 51, 51);
+  	text-transform: uppercase;
+}
+.button {
+	position: absolute;
+	left: 165px;
+	bottom: 260px;
+	display: inline-block;
+	width: 226px;
+	height: 57px;
+	border: 1px solid var(--gold-color);
+	text-align: center;
+	padding: 22px 0;
+	font: 700 16px/0.586 "Montserrat", sans-serif;
+	color: rgb(51, 51, 51);
+}
+
+
+
+/*.hero-title:before {
+	content: '';
+	position: absolute;
+    left: 280px;
+    bottom: 50%;
+    transform: translateY(50%);
+	display: block;
+	width: 340px;
+	height: 500px;
+	background-color: #f1f1f1;
+	opacity: 0.588;
+}*/
+
+.video-button {
+  position: absolute;
+  left: 690px;
+  bottom: 255px;
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+}
+.video-button span {
+  position: absolute;
+  /*width: 20px;*/
+  left: 50%;
+  top: 0;
+  transform-origin: bottom center;
+  height: 70px;
+  font: 500 22px/0,44 "Montserrat", sans-serif;
+  color: #fff;
+}
+.beauty_space_salon__ {
+  font-size: 21.423px;
+  font-family: "Montserrat";
+  color: rgba(255, 255, 255, 0.702);
+  line-height: 0.438;
+  -moz-transform: matrix( 1.0269267500807,0,0,1.0269267500807,0,0);
+  -webkit-transform: matrix( 1.0269267500807,0,0,1.0269267500807,0,0);
+  -ms-transform: matrix( 1.0269267500807,0,0,1.0269267500807,0,0);
+  position: absolute;
+  left: 895.235px;
+  top: 689.421px;
+  width: 127.872px;
+  height: 130.419px;
+  z-index: 239;
+}
+
+
+.char1 { transform: rotate(-1deg); }
+.char2 { transform: rotate(19deg); }
+.char3 { transform: rotate(39deg); }
+.char4 { transform: rotate(59deg); }
+.char5 { transform: rotate(79deg); }
+.char6 { transform: rotate(114deg); }
+.char7 { transform: rotate(134deg); }
+.char8 { transform: rotate(154deg); }
+.char9 { transform: rotate(174deg); }
+.char10 { transform: rotate(194deg); }
+.char11 { transform: rotate(229deg); }
+.char12 { transform: rotate(249deg); }
+.char13 { transform: rotate(269deg); }
+.char14 { transform: rotate(289deg); }
+.char15 { transform: rotate(309deg); }
+.char16 { transform: rotate(329deg); }
+
+.link-socio {
+	position: absolute;
+	right: 0;
+	bottom: 70px;
+}
+
+/*акційні пропозтцій*/
+.offers .container {
+	position: relative;
+	padding-top: 40px;
+	padding-bottom: 104px;
+}
+
+.offers-img-thumb {
+	width: 835px;
+	height: 712px;
+}
+.offers-content {
+	position: absolute;
+	right: 15px;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 138px 140px 125px 140px;
+	width: 840px;
+	height: 640px;
+	background-color: var(--text-nav-current-bg-menu);
+	text-align: center;
+}
+.offers-content b {
+  position: relative;
+  font: 700 25px/1.2 "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  margin-bottom: 76px;
+}
+.offers-content b:after {
+	position: absolute;
+	left: 50%;
+	bottom: -32px;
+	transform: translateX(-50%);
+	content: '';
+	display: block;
+	width: 95px;
+	height: 2px;
+	background-color: #fff;
+}
+.offers-content h3 {
+  font: 400 25px/1.2 "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  margin-bottom: 70px;
+}
+.offers-content p {
+	font: 300 16px/1.2 "Montserrat", sans-serif;
+	color: rgb(145, 143, 143);	
+	margin-bottom: 67px;
+}
+.offers-content .button {
+	position: static;
+    color: #fff;
+}
+
+
+/*послуги салону*/
+.services .container {
+	position: relative;
+}
+.services-img-thumb {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.services-img-thumb img {
+	width: 100%;
+}
+/*.services-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 100px 160px 115px 170px;
+}*/
+.services-title {
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	font: 700 25px/1.2 "Montserrat", sans-serif;
+	color: var(--gold-text-color);
+	/*color: rgb(231, 193, 39)*/
+	text-transform: uppercase;
+	text-align: center;
+}
+.services-title:after {
+	position: absolute;
+	left: 50%;
+	bottom: -32px;
+	transform: translateX(-50%);
+	content: '';
+	display: block;
+	width: 93px;
+	height: 1px;
+	background-color: #fff;
+}
+
+
+.services-list {
+	position: absolute;
+	left: 170px;
+	bottom: 115px;
+
+	font: 300 26px/2.7 "Montserrat", sans-serif;
+	/*color: var(--text-color);*/
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	
+	counter-reset: list-counter;
+}
+
+.services-list-item {
+	position: relative;
+	display: flex;
+/*	width: 345px;
+	border: transparent;
+	border-bottom: 1px solid #646464;*/
+}
+.services-list-item:before {
+	counter-increment: list-counter 01;
+    content: "0" counter(list-counter) ' ';
+    margin-right: 50px;
+    font: 700 16px/4.4 "Montserrat", sans-serif;
+}
+.services-list-item:not(:last-child):after {
+	position: absolute;
+	bottom: 0;
+	left: 50px;
+	content: '';
+	display: block;
+	width: 345px;
+	height: 1px;
+	background-color: #646464;
+}
+.services-submenu {
+	position: absolute;
+	left: 780px;
+	top: -69px;
+	
+	width: 375px;
+
+	font: 500 18px/4 "Montserrat", sans-serif;
+	color: rgb(255, 255, 255);
+	text-transform: none;
+}
+
+
+
+.services-submenu li {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+/*переваги*/
+.advantages .container {
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+.advantages-list {
+	display: flex;
+}
+.advantages-list-item img {
+	width: 100%;
+	height: 100%;
+	filter: brightness(0.35);
+}
+.advantages-list-item {
+	position: relative;
+	/*display: flex;
+	align-items: center;*/
+	max-height: 370px;
+	border: 1px solid #fff;
+}
+.advantages-text {
+	position: absolute;
+	left: 50%;
+	top: 246px;
+	transform: translateX(-50%);
+	
+	width: 280px;
+
+	font: 700 18px/1.2 "Montserrat", sans-serif;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	text-transform: none;
+}
+
