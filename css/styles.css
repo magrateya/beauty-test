@@ -418,6 +418,9 @@ header .container {
 .char16 { transform: rotate(329deg); }
 
 .list-socio {
+/*	align-self: flex-end;
+	margin-bottom: 70px;
+	margin-top: -70px;*/
 	position: absolute;
 	right: 15px;
 	bottom: 70px;
@@ -484,7 +487,7 @@ header .container {
 .arrow-btn {
 	position: absolute;
 	top: 99px;
-	right: 15px;
+	right: 55px;
 	display: flex;
 	
 }
@@ -515,7 +518,7 @@ header .container {
 /*	position: absolute;
 	right: 15px;*/
 	/*bottom: 0;*/
-	margin: 210px 0 0 -100px;
+	margin: 210px 0 0 -170px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -639,6 +642,7 @@ header .container {
 }
 .services-list-item:hover:after {
 	width: 530px;
+	/*width: 100%;*/
 	background-color: var(--gold-text-color);
 }
 .services-list-item:hover .services-submenu {
@@ -648,16 +652,26 @@ header .container {
 	opacity: 0;
 	position: absolute;
 	left: 120%;
-	top: -69px;
+	/*top: -69px;*/
 	padding-right: 90px;
 	width: 465px;
 
 	font: 500 18px/4 "Montserrat", sans-serif;
 	color: rgb(255, 255, 255);
+
 	text-transform: none;
 
 	max-height: 20em;
     overflow: auto;
+}
+.services-submenu.manicure {
+	top: 0;
+}
+.services-submenu.pedicure {
+	top: -69px;
+}
+.services-submenu.hairdresser {
+	top: -138px;
 }
 .services-submenu li {
 	display: flex;
@@ -667,7 +681,7 @@ header .container {
 	width: 4px;
 }
 ::-webkit-scrollbar-track {
-	background-color: gray;
+	background-color: #53504c;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -723,6 +737,9 @@ header .container {
 	width: 55px;
 	fill: #a4a3a4;
 }
+/*.advant-icon path {
+	fill: #fff;
+}*/
 .advant-line {
 	display: block;
 	width: 91px;
@@ -756,7 +773,7 @@ header .container {
 	opacity: 0;
 }
 .advantages-list-item:hover {
-	transform: scaleY(1.23) translateY(13px);
+	transform: scaleY(1.23) translateY(10px);
 }
 .advantages-list-item:hover .overlay {
 	opacity: 1;
@@ -772,4 +789,6 @@ header .container {
 	height: 80px;
 	margin-bottom: 18px;
 }
-
+.advantages-list-item:hover .advant-list-bg {
+	filter: brightness(1);
+}
