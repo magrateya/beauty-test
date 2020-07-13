@@ -74,7 +74,7 @@ body {
 	max-width: 1500px;
 	width: 100%;
 	height: 100%;
-	padding: 0 15px 0 15px;
+	/*padding: 0 15px 0 15px;*/
 	margin: 0 auto 0 auto;
 }
 
@@ -91,7 +91,7 @@ header .container {
 	position: relative;
 	display: flex;
 	align-items: center;
-	padding: 10px 15px;
+	padding: 10px 0;
 }
 
 .sand-link {
@@ -146,10 +146,11 @@ header .container {
 	left: -14%;
 	/*left: -210px;*/
 	transform: translateX(-100%);
-	opacity: 0;
-	min-width: 745px;
+	padding: 355px 225px 0 210px;
+	/*min-width: 755px;*/
 	height: 100vh;
 	background-color: var(--text-nav-current-bg-menu);
+	opacity: 0;
 }
 .menu-container nav {
 	width: 100%;
@@ -160,7 +161,6 @@ header .container {
 	opacity: 1;
 }
 .nav-list {
-	padding: 355px 0 0 210px;
 	font: 300 32px/3.13 "Montserrat", sans-serif;
 	color: rgb(255, 255, 255);
 	text-transform: uppercase;
@@ -240,15 +240,6 @@ header .container {
 	padding: 6px 0;
 }
 
-/*.lang-item-main:after {
-	content: '';
-	display: block;
-	background-color: #fff;
-	background-image: url(../img/arrow-down.svg);
-	background-repeat: no-repeat;
-	-webkit-background-size: 12px 7px;
-	background-size: 12px 7px;
-}*/
 .lang-sub {
 	position: absolute;
 	left: 0;
@@ -338,12 +329,12 @@ header .container {
 }
 .hero-title-box {
 	position: relative;
-	padding: 0 115px 0 140px;
+	padding: 0 115px 0 165px;
 }
 .hero-title-box:before {
 	content: '';
 	position: absolute;
-    top: -30px;
+    top: -40px;
     left: 435px;
    	display: block;
 	width: 340px;
@@ -373,7 +364,7 @@ header .container {
 .video-button {
   position: absolute;
   left: 690px;
-  bottom: -20px;
+  bottom: -10px;
   display: inline-block;
   width: 140px;
   height: 140px;
@@ -486,7 +477,7 @@ header .container {
 .arrow-btn {
 	position: absolute;
 	top: 99px;
-	right: 55px;
+	right: 40px;
 	display: flex;
 	
 }
