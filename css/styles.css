@@ -291,8 +291,9 @@ header .container {
 .hero-thumb {
 	position: absolute;
 	right: 0;
-	width: 61.5%;
+	max-width: 61.5%;
 	height: 100vh;
+	overflow: hidden;
 }
 .hero-thumb img {
 	width: 100%;
@@ -513,17 +514,12 @@ header .container {
 }
 
 .offers-content {
-/*	position: absolute;
-	right: 15px;*/
-	/*bottom: 0;*/
 	margin: 210px 0 0 -170px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	padding: 138px 140px 125px 140px;
-/*	width: 840px;
-	height: 640px;*/
 	background-color: var(--text-nav-current-bg-menu);
 	text-align: center;
 }
@@ -572,18 +568,24 @@ header .container {
 	position: absolute;
 	top: 0;
 	left: 0;
-	max-width: 100%;
-	max-height: 100%;
+	/*max-width: 100%;
+	max-height: 100%;*/
 	overflow: hidden;
+	width: 100%;
+	height: 100%;
 }
 .services-img-thumb img {
+	display: block;
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	/*width: 100%;*/
 	/*width: 99%;*/
 }
 
 .services-title {
 	position: relative;
-	/*padding-top: 100px;*/
 	margin-bottom: 115px;
 	font: 700 25px/1.2 "Montserrat", sans-serif;
 	color: var(--gold-text-color);
@@ -604,9 +606,8 @@ header .container {
 
 
 .services-list {
-	/*padding-left: 166px;*/
+	position: relative;
 	width: 50%;
-
 	font: 300 26px/2.7 "Montserrat", sans-serif;
 	/*color: var(--text-color);*/
 	color: rgb(255, 255, 255);
@@ -615,26 +616,23 @@ header .container {
 	counter-reset: list-counter;
 }
 
-.services-list-item {
+.services-list-item > span {
 	position: relative;
-	display: flex;
-/*	width: 345px;
-	border: transparent;
-	border-bottom: 1px solid #646464;*/
+	display: block;
 }
-.services-list-item:before {
+.services-list-item > span:before {
 	counter-increment: list-counter 01;
     content: "0" counter(list-counter) ' ';
     margin-right: 50px;
     font: 700 16px/4.4 "Montserrat", sans-serif;
 }
-.services-list-item:not(:last-child):after {
+.services-list-item:not(:last-child) > span:after {
 	position: absolute;
 	bottom: 0;
 	left: 50px;
 	content: '';
 	display: block;
-	width: 345px;
+	width: 68%;
 	height: 1px;
 	background-color: #646464;
 }
@@ -642,58 +640,57 @@ header .container {
 	color: var(--gold-text-color);
 	font-weight: 700;
 }
-.services-list-item:hover:after {
-	width: 530px;
-	/*width: 100%;*/
+.services-list-item:hover > span:after {
+	width: calc(100% - 50px);
 	background-color: var(--gold-text-color);
 }
 .services-list-item:hover .services-submenu {
 	opacity: 1;
 	left: 100%;
 	padding: 0 95px 0 105px;
-	/*padding-left: 105px;*/
+	/*padding: 15px 95px 15px 105px;*/
 	width: 100%;
 }
-.services-submenu {
+.services-list-item .services-submenu {
 	opacity: 0;
 	position: absolute;
 	left: -100%;
-	/*padding-right: 90px;*/
+	top:0;
 	width: 100%;
 
 	font: 500 18px/4 "Montserrat", sans-serif;
 	color: rgb(255, 255, 255);
 	text-transform: none;
 	max-height: 20em;
+	/*max-height: 360px;*/
     overflow: auto;
 }
-.services-submenu.manicure {
-	top: 0;
+.services-list-item .services-submenu.active,
+.services-list-item:hover .services-submenu {
+	opacity: 1;
+	left: 100%;
 }
-.services-submenu.pedicure {
-	top: -69px;
-}
-.services-submenu.hairdresser {
-	top: -138px;
-}
-.services-submenu li {
+
+.services-list-item .services-submenu li {
 	display: flex;
 	justify-content: space-between;
+	/*padding: 15px 0;*/
 }
-.services-submenu::-webkit-scrollbar {
+.services-list-item .services-submenu::-webkit-scrollbar {
 	width: 4px;
 }
-.services-submenu::-webkit-scrollbar-track {
+.services-list-item .services-submenu::-webkit-scrollbar-track {
 	background-color: #53504c;
 }
 
-.services-submenu::-webkit-scrollbar-thumb {
+.services-list-item .services-submenu::-webkit-scrollbar-thumb {
     background: #fff; 
 }
 .video-button.golden {
 	position: absolute;
 	top: -85px;
-    left: 1435px;
+	left: 95%;
+    /*left: 1435px;*/
 }
 .video-button.golden span {
 	color: var(--gold-text-color);
@@ -704,6 +701,8 @@ header .container {
     top: 50%;
     transform: translate(-50%, -50%);
 }
+
+
 /*переваги*/
 .advantages .container {
 	padding-top: 70px;
