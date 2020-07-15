@@ -66,19 +66,16 @@ body {
 	overflow: hidden;
 }
 
-/*section {
-	max-width: 1920px;
-	margin: 0 auto;
-}*/
 .container {
 	max-width: 1500px;
 	width: 100%;
 	height: 100%;
-	/*padding: 0 15px 0 15px;*/
 	margin: 0 auto 0 auto;
 }
 
+
 /*шапка*/
+
 header {
 	position: absolute;
     left: 50%;
@@ -241,7 +238,6 @@ header .container {
 	padding-top: 6px;
 }
 .lang-sub > li:not(:last-child) {
-	/*padding-bottom: 6px;*/
 	margin-bottom: 6px;
 }
 .lang-sub a {
@@ -251,6 +247,7 @@ header .container {
 .lang-item-main:hover .lang-sub{
 	opacity: 1;
 }
+
 
 /*герой*/
 
@@ -333,7 +330,6 @@ header .container {
 }
 .hero-title {
 	position: relative;
-	/*padding-left: 150px;*/
 	margin-bottom: 80px;
 	font: 300 122px/1 "Montserrat", sans-serif;
 	color: rgb(51, 51, 51);
@@ -399,7 +395,7 @@ header .container {
 	margin-bottom: -250px;
 
 /*	position: absolute;
-	right: 15px;
+	right: 0;
 	bottom: 70px;*/
 }
 .link-socio {
@@ -418,7 +414,9 @@ header .container {
 	transform: scale(0.8);
 }
 
-/*акційні пропозтцій*/
+
+/*секція акційні пропозиції*/
+
 .offers .container {
 	position: relative;
 	padding-top: 40px;
@@ -531,7 +529,8 @@ header .container {
 }
 
 
-/*послуги салону*/
+/*секція послуги салону*/
+
 .services .container {
 	position: relative;
 	padding: 100px 165px 110px 165px;
@@ -571,8 +570,6 @@ header .container {
 	height: 1px;
 	background-color: #fff;
 }
-
-
 .services-list {
 	position: relative;
 	width: 50%;
@@ -615,7 +612,6 @@ header .container {
 	opacity: 1;
 	left: 100%;
 	padding: 0 95px 0 105px;
-	/*padding: 15px 95px 15px 105px;*/
 	width: 100%;
 }
 .services-list-item .services-submenu {
@@ -670,7 +666,8 @@ header .container {
 }
 
 
-/*переваги*/
+/*секція переваги*/
+
 .advantages .container {
 	padding-top: 70px;
 	padding-bottom: 70px;
