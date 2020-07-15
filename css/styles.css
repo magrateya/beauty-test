@@ -101,7 +101,6 @@ header .container {
 	z-index: 9;
 }
 .sand {
-	/*position: relative;*/
 	display: inline-block;
 	width: 33px;
 	height: 2px;
@@ -111,8 +110,6 @@ header .container {
 }
 .sand:before,
 .sand:after {
-
-	/*position: absolute;*/
 	display: block;
 	content:"";
 	width: 33px;
@@ -147,7 +144,6 @@ header .container {
 	/*left: -210px;*/
 	transform: translateX(-100%);
 	padding: 355px 225px 0 210px;
-	/*min-width: 755px;*/
 	height: 100vh;
 	background-color: var(--text-nav-current-bg-menu);
 	opacity: 0;
@@ -175,7 +171,6 @@ header .container {
 
 .logo-link {
 	display: inline-block;
-	/*margin-right: 466px;*/
 }
 
 .contacts {
@@ -186,7 +181,6 @@ header .container {
 	margin-right: 104px;
 	font: 100 16px/0.586 "Montserrat", sans-serif;
 	color: var(--contacts-text);
-	/*color: rgb(255, 255, 255);*/
 }
 
 .contacts > li:not(:last-child){
@@ -197,7 +191,6 @@ header .container {
 	align-items: center;
 	font: 700 20px/0.469 "Montserrat", sans-serif;
 	color: var(--gold-text-color);
-	/*color: rgb(231, 193, 39);*/
 }
 .contacts-tell img {
 	margin-right: 15px;
@@ -226,7 +219,6 @@ header .container {
 	background-color: #fff;
 }
 .lang {
-	/*margin: 0 0 0 auto;*/
 	font: 500 16px/0.6 "Montserrat", sans-serif;
 	color: #fff;
 }
@@ -260,8 +252,6 @@ header .container {
 	opacity: 1;
 }
 
-
-
 /*герой*/
 
 .hero {
@@ -277,12 +267,11 @@ header .container {
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
-	/*pointer-events: none;*/
 }
 .hero-thumb {
 	position: absolute;
 	right: 0;
-	max-width: 61.5%;
+	max-width: 61%;
 	height: 100vh;
 	overflow: hidden;
 }
@@ -371,7 +360,6 @@ header .container {
 }
 .video-button span {
   position: absolute;
-  /*width: 20px;*/
   left: 50%;
   top: 0;
   transform-origin: bottom center;
@@ -386,7 +374,6 @@ header .container {
 	position: absolute;
     left: 50%;
     top: 50%;
-    /*transform: translate(-50%, -50%);*/
     transform: translateY(-50%);
 }
 
@@ -441,20 +428,15 @@ header .container {
 
 .offers-img-thumb {
 	width: 57%;
-	/*height: 712px;*/
 }
 .progress-box {
 	position: absolute;
 	left: 45px;
-	/*top: 810px;*/
 	bottom: 164px;
 	display: flex;
 	align-items: center;
 }
 .progress-bg {
-/*  position: absolute;
-  left: 45px;
-  top: 810px;*/
   margin-right: 35px;
   width: 497px;
   height: 3px;
@@ -552,15 +534,12 @@ header .container {
 /*послуги салону*/
 .services .container {
 	position: relative;
-	/*max-height: 686px;*/
 	padding: 100px 165px 110px 165px;
 }
 .services-img-thumb {
 	position: absolute;
 	top: 0;
 	left: 0;
-	/*max-width: 100%;
-	max-height: 100%;*/
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
@@ -571,8 +550,6 @@ header .container {
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
-	/*width: 100%;*/
-	/*width: 99%;*/
 }
 
 .services-title {
@@ -600,8 +577,7 @@ header .container {
 	position: relative;
 	width: 50%;
 	font: 300 26px/2.7 "Montserrat", sans-serif;
-	/*color: var(--text-color);*/
-	color: rgb(255, 255, 255);
+	color: #fff;
 	text-transform: uppercase;
 	
 	counter-reset: list-counter;
@@ -705,9 +681,6 @@ header .container {
 .advantages-list-item {
 	position: relative;
 	width: calc(100% / 4);
-	
-	/*display: flex;
-	align-items: center;*/
 	border: 1px solid #fff;
 }
 .advant-list-bg {
@@ -752,16 +725,6 @@ header .container {
 	/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 	height: 83px;
 }
-/*.advantages-text:before {
-	content: '';
-	display: block;
-	width: 55px;
-	height: 55px;
-	background-image: url(../img/icon1.svg);
-	background-repeat: no-repeat;
-	margin: 0 auto 33px auto;
-
-}*/
 .overlay {
 	position: absolute;
 	top: 0;
@@ -772,7 +735,7 @@ header .container {
 	opacity: 0;
 }
 .advantages-list-item:hover {
-	transform: scaleY(1.23) translateY(10px);
+	transform: scaleY(1.23) translateY(15px);
 	max-height: 370px;
 }
 .advantages-list-item:hover .overlay {
@@ -792,10 +755,6 @@ header .container {
 .advantages-list-item:hover .advant-list-bg {
 	filter: brightness(1);
 }
-.advant-list-item:hover .advant-list-box {
-	/*padding: 123px 48px 0 48px;*/
-	padding: 0;
-}
 .advantages-list-item:hover .advant-icon path {
 	fill: #333333;
 }
@@ -807,3 +766,4 @@ header .container {
 .advantages-list-item:first-child:hover .advant-icon {
 	opacity: 0;
 }
+
