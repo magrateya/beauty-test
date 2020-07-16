@@ -8,6 +8,8 @@
 
 	<link rel="stylesheet" href="./css/resetstyles.css">
     <link rel="stylesheet" href="./css/styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 <body>
 	<header>
@@ -38,6 +40,8 @@
 				</nav>
 			</div>
 
+
+
 			<a href="./index.html" class="logo-link">
 				<img src="./img/logo.png" alt="логотип">
 			</a>
@@ -49,15 +53,14 @@
 					+38 (073) 323 18 55
 					</a>
 				</li>
-				<li>
-					<!-- <a href="viber://chat?number=%2B380733231855" target="_blank">Viber</a> -->
-					<a href="https://viber.me/+380733231855/" target="_blank">Viber</a>
+				<li class="contacts-item">
+					<a href="viber://chat?number=%2B380733231855" target="_blank">Viber</a>
+					<!-- <a href="https://viber.me/+380733231855/" target="_blank">Viber</a> -->
 				</li>
-				<li class="contacts-teleg-item">
-					<!-- <a href="https://msng.link/o/?380733231855=tg" target="_blank">Telegram</a> -->
-					<a href="https://t.me/beauty_space" target="_blank">Telegram</a>
+				<li class=" contacts-item contacts-teleg-item">
+					<a href="https://telegram.me/380733231855" target="_blank">Telegram</a>
 				</li>
-				<li>
+				<li class="contacts-item">
 					<a href="https://wa.me/380733231855" target="_blank">WhatsApp</a>
 				</li>
 			</ul>
@@ -82,7 +85,7 @@
 			<div class="hero-thumb">
 				<video poster="./img/hero.jpg" 
 				
-				autoplay="autoplay"
+				
   				loop muted="" 
   				preload="auto">
 					<source src="./img/video.mp4" type="video/mp4">
@@ -96,7 +99,7 @@
 				<div class="hero-title-box">
 					<p class="hero-title-spec">новий</p>
 					<h1 class="hero-title">салон <br> краси <br> у києві</h1>
-					<a href="" class="button">Запис онлайн</a>
+					<a href="#form" class="button scrollto">Запис онлайн</a>
 
 					<a href="" class="video-button">
 						<img src="./img/play.svg" alt="" width="14" height="15" class="play-icon">
@@ -124,17 +127,17 @@
 				<ul class="list-socio">
 					<li>
 						<a href="" class="link-socio" target="_blank">
-							<img src="./img/tw.svg" alt="іконка твіттер">
+							<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 416"><g data-name="Слой 2"><path d="M512 49.25a218.64 218.64 0 01-60.48 16.57 104.36 104.36 0 0046.18-58 210 210 0 01-66.56 25.41A105 105 0 00249.57 105a108 108 0 002.43 23.93C164.74 124.67 87.52 82.85 35.65 19.14A105 105 0 0067.9 159.42a103.69 103.69 0 01-47.42-12.92v1.15a105.43 105.43 0 0084.1 103.13 104.65 104.65 0 01-27.52 3.46 92.77 92.77 0 01-19.88-1.79c13.6 41.57 52.2 72.13 98.08 73.12a210.93 210.93 0 01-130.14 44.77A197.72 197.72 0 010 368.9 295.54 295.54 0 00161 416c193.16 0 298.76-160 298.76-298.69 0-4.64-.16-9.12-.39-13.57A209.29 209.29 0 00512 49.25z" fill="#fff" data-name="Capa 1"/></g></svg>
 						</a>
 					</li>
 					<li>
 						<a href="" class="link-socio" target="_blank">
-							<img src="./img/insta.svg" alt="іконка інстаграм">
+							<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97.39 97.39"><g data-name="Слой 2"><path d="M12.5 0h72.39a12.2 12.2 0 0112.5 12.5v72.39a12.2 12.2 0 01-12.5 12.5H12.5A12.2 12.2 0 010 84.89V12.5A12.2 12.2 0 0112.5 0zM71 10.82a4.4 4.4 0 00-4.39 4.39V25.7A4.41 4.41 0 0071 30.09h11a4.4 4.4 0 004.38-4.39V15.21A4.39 4.39 0 0082 10.82zm15.39 30.37h-8.57a28.51 28.51 0 011.25 8.35c0 16.2-13.56 29.34-30.28 29.34S18.52 65.74 18.52 49.54a28.46 28.46 0 011.25-8.35h-8.95v41.14a3.89 3.89 0 003.88 3.87h67.82a3.88 3.88 0 003.87-3.87V41.19zm-37.6-11.66c-10.8 0-19.56 8.49-19.56 19S38 67.44 48.79 67.44 68.35 59 68.35 48.49s-8.76-18.96-19.56-18.96z" fill="#fff" data-name="Capa 1"/></g></svg>
 						</a>
 					</li>
 					<li>
 						<a href="" class="link-socio" target="_blank">
-							<img src="./img/fb.svg" alt="іконка фейсбук">
+							<svg width="12" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.97 96.12"><g data-name="Слой 2"><path d="M50 0H37.55c-14 0-23.06 9.28-23.06 23.66v10.9H2a2 2 0 00-2 2v15.77a2 2 0 002 2h12.49v39.83a2 2 0 002 2H32.8a2 2 0 002-2V54.29h14.62a2 2 0 002-2V36.52a1.94 1.94 0 00-.57-1.38 2 2 0 00-1.39-.58h-14.7v-9.24c0-4.45 1.06-6.7 6.85-6.7H50a2 2 0 002-2V2a2 2 0 00-2-2z" fill="#fff" data-name="Capa 1"/></g></svg>
 						</a>
 					</li>
 				</ul>
@@ -145,8 +148,17 @@
 		<section class="offers">
 			<div class="container">
 				<h2 class="visually-hidden">акційні пропозиції</h2>
-				<div class="offers-img-thumb">
-					<img src="./img/nails.jpg" alt="картинка пудрове напилення нігтів">
+
+				<div class="slide-box">
+					<div class="offers-img-thumb">
+					<img class="offers-img-bg" src="./img/nails.jpg" alt="картинка пудрове напилення нігтів">
+				</div>
+				<div class="offers-content">
+					<b>акційна пропозиція</b>
+					<h3>пудровое напыление ногтей</h3>
+					<p>When you walk into an Aveda salon, you know it’s going to be an incredible experience. As an Aveda salon Spruce is dedicated to creating a unique experience for every guest.</p>
+					<a href="#form" class="button scrollto">Запис онлайн</a>
+				</div>
 				</div>
 
 				<div class="progress-box">
@@ -170,13 +182,6 @@
 						</a>
 					</li>
 				</ul>
-
-				<div class="offers-content">
-					<b>акційна пропозиція</b>
-					<h3>пудровое напыление ногтей</h3>
-					<p>When you walk into an Aveda salon, you know it’s going to be an incredible experience. As an Aveda salon Spruce is dedicated to creating a unique experience for every guest.</p>
-					<a href="" class="button">Запис онлайн</a>
-				</div>
 			</div>
 		</section>
 
@@ -215,7 +220,7 @@
 						<li class="services-list-item">
 							<span>перукар</span>
 							<ul class="services-submenu">
-								<li><span>Классический педикюр</span><span>300 грн</span></li>
+								<li><span>Классическая стрижка</span><span>300 грн</span></li>
 								<li><span>Косметический педикюр</span><span>400 грн</span></li>
 								<li><span>Медицинский педикюр</span><span>300 грн</span></li>
 								<li><span>Педикюр-спа</span><span></span>400 грн</li>
@@ -272,15 +277,16 @@
 		
 		<!-- переваги -->
 		<section class="advantages">
-			<div class="container">
+			<div class="container" id="form">
 				<h2 class="visually-hidden">Наші переваги</h2>
 				<ul class="advantages-list">
 					<li class="advantages-list-item">
 						<div class="overlay"></div>
 						<img src="./img/phylos-prod1.jpg" alt="картинка переваги" class="advant-list-bg">
 						<div class="advant-list-box">
-							<img src="./img/icon1.svg" alt="іконка" class="advant-icon">
-							<img src="./img/icon1-hover.svg" alt="іконка" class="advant-icon-hover">
+							<svg class="advant-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 481.61"><defs><style>.cls-1{fill:#999998}</style></defs><g id="Слой_2" data-name="Слой 2"><g id="Capa_1" data-name="Capa 1"><path class="cls-1" d="M497 179.61h-15v-15a45.05 45.05 0 00-36.8-44.23 54.86 54.86 0 006-18.85A90.24 90.24 0 00421.4 22a88.7 88.7 0 00-75.55-20.38 15 15 0 00-8.37 24.73c6.67 7.47 3.94 16 2.45 19.32-2.87 6.43-10.05 13.94-20.8 13.94H135a75.1 75.1 0 00-73.88 62.2A45.07 45.07 0 0030 164.61v15H15a15 15 0 00-15 15v212a75.09 75.09 0 0075 75h362a75.08 75.08 0 0075-75v-212a15 15 0 00-15-15zm-362-90h184.13a53.08 53.08 0 0048.19-31.7 49.2 49.2 0 003.93-27.31 58.43 58.43 0 0130.38 14 60.27 60.27 0 0119.86 53.1 25.25 25.25 0 01-25 21.91H92.59a45.09 45.09 0 0142.41-30zm-75 75a15 15 0 0115-15h362a15 15 0 0115 15v15H60zm422 242a45 45 0 01-45 45H75a45 45 0 01-45-45v-197h452z"/><path class="cls-1" d="M407 239.61H105a15 15 0 00-15 15v152a15 15 0 0015 15h302a15 15 0 0015-15v-152a15 15 0 00-15-15zm-15 152H120v-122h272z"/></g></g></svg>
+							<!-- <img src="./img/icon1.svg" alt="іконка" class="advant-icon">
+							<img src="./img/icon1-hover.svg" alt="іконка" class="advant-icon-hover"> -->
 							<span class="advant-line"></span>
 							<h3 class="advantages-text">Философия работы с экологичными продуктами и процедурами</h3>
 						</div>
@@ -320,5 +326,46 @@
 		</section>
 	</main>
 	
+	<script>
+	$(function(){
+ 	 	$('.sand-link').click(function () {
+ 	 		$(this).toggleClass('sand-link-active');
+	 		$(".menu-container").toggleClass('active'); return false;
+			});
+		});
+	</script>
+	<script>
+		$(function(){
+			$('.lang-item-main').click(function () {
+ 	 			$(".lang-sub").toggleClass('active'); return false;
+ 	 		});
+		});
+	</script>
+	<script>
+		$(function() {
+			$("a.scrollto").click(function () {
+			elementClick = $(this).attr("href")
+			destination = $(elementClick).offset().top;
+			$("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 1100); return false;
+			});
+		});
+	</script>
+	<script>
+		$(function(){
+			$('.services-list-item').click(function () {
+
+				$(this).children(".services-submenu").toggleClass('opened');
+			});
+		});
+	</script>
+<!-- 	<script>
+		$(function(){
+ 	 	$('.video-button').click(function () {
+	 		$("video").val(play); 
+			});
+		});
+	</script> -->
+
+
 </body>
 </html>
