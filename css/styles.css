@@ -85,7 +85,7 @@ header {
     margin: 0 auto 0 auto;
 }
 header .container {
-	position: relative;
+	/*position: relative;*/
 	display: flex;
 	align-items: center;
 	padding: 10px 0;
@@ -152,7 +152,8 @@ header .container {
 .menu-container {
 	position: absolute;
 	top: 0;
-	left: -14%;
+	left: 0;
+	/*left: -14%;*/
 	/*left: -210px;*/
 	transform: translateX(-100%);
 	padding: 355px 225px 0 210px;
@@ -163,11 +164,13 @@ header .container {
 }
 .menu-container nav {
 	width: 100%;
-	height: 100%;
 }
 .menu-container.active {
 	transform: translateX(0);
 	opacity: 1;
+}
+.menu-contacts {
+	display: none;
 }
 /*.sand-link:hover + .menu-container {
 	transform: translateX(0);
@@ -294,6 +297,7 @@ header .container {
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
+	height: 100vh;
 }
 .hero-thumb {
 	position: absolute;
@@ -345,16 +349,17 @@ header .container {
 }
 .hero-title-box {
 	position: relative;
-	padding: 0 115px 0 165px;
+	width: 52%;
+	padding: 0 0 0 165px;
 }
 .hero-title-box:before {
 	content: '';
 	position: absolute;
     top: -40px;
-    left: 435px;
+    right: 0;
    	display: block;
-	width: 340px;
-	height: 500px;
+	width: 43%;
+	height: 100%;
 	background-color: #f1f1f1;
 	opacity: 0.588;
 }
@@ -367,11 +372,9 @@ header .container {
 }
 .button {
 	display: inline-block;
-	width: 226px;
-	height: 57px;
 	border: 1px solid var(--gold-color);
 	text-align: center;
-	padding: 22px 0;
+	padding: 22px 53px;
 	font: 700 16px/0.586 "Montserrat", sans-serif;
 	color: var(--text-nav-current-bg-menu);
 	
@@ -383,7 +386,7 @@ header .container {
 }
 .video-button {
   position: absolute;
-  left: 690px;
+  right: -40px;
   bottom: -10px;
   display: inline-block;
   width: 140px;
@@ -403,7 +406,7 @@ header .container {
 	animation: rotateButton 5s linear infinite;
 }
 
-@keyframes rotateButton {
+/*@keyframes rotateButton {
   0% {
     transform: rotate3d(0, 0, 1, 0deg);
   }
@@ -411,7 +414,7 @@ header .container {
   100% {
     transform: rotate3d(0, 0, 1, 360deg);
   }
-}
+}*/
 .video-button:hover > .play-icon {
 	/*transform: rotate(-300deg) translate(0, -50%);*/
 	animation: rotateIcon 5s linear infinite;
@@ -426,7 +429,7 @@ header .container {
     
 }
 
-@keyframes rotateIcon {
+/*@keyframes rotateIcon {
   0% {
     transform: rotate3d(0, 0, 1, 0deg);
   }
@@ -434,7 +437,7 @@ header .container {
   100% {
     transform: rotate3d(0, 0, 1, -360deg);
   }
-}
+}*/
 
 .char1 { transform: rotate(-1deg); }
 .char2 { transform: rotate(19deg); }
@@ -454,12 +457,12 @@ header .container {
 .char16 { transform: rotate(329deg); }
 
 .list-socio {
-	align-self: flex-end;
-	margin-bottom: -250px;
+/*	align-self: flex-end;
+	margin-bottom: -250px;*/
 
-/*	position: absolute;
+	position: absolute;
 	right: 0;
-	bottom: 70px;*/
+	bottom: 70px;
 }
 .link-socio {
 	display: flex;
@@ -503,16 +506,17 @@ header .container {
 .slide-box {
 	display: flex;
 	align-items: flex-start;
+	width: 100%;
 }
 .offers-img-thumb {
 	width: 100%;
-	max-width: 56%;
+	max-width: 57;
 	overflow: hidden;
 	z-index: -1;
 }
 .offers-content {
 	width: 100%;
-	max-width: 56%;
+	max-width: 57%;
 	margin: 210px 0 0 -170px;
 	display: flex;
 	flex-direction: column;
@@ -557,8 +561,9 @@ header .container {
 }
 .progress-box {
 	position: absolute;
-	left: 45px;
+	left: 0;
 	bottom: 164px;
+	left: 45px;
 	display: flex;
 	align-items: center;
 }
@@ -647,7 +652,8 @@ header .container {
 .services-title:after {
 	position: absolute;
 	left: 50%;
-	bottom: -32px;
+	bottom: -50%;
+	/*bottom: -32px;*/
 	transform: translateX(-50%);
 	content: '';
 	display: block;
@@ -767,7 +773,7 @@ header .container {
     /*animation: 10s linear infinite;
     animation-name: rotateIconBs, transformIconBs;*/
 }
-@keyframes buttonGolden {
+/*@keyframes buttonGolden {
   0% {
     transform: rotate3d(0, 0, 1, 0deg);
   }
@@ -785,7 +791,7 @@ header .container {
     transform: rotate3d(0, 0, 1, -360deg);
   }
 }
-
+*/
 
 /*секція переваги*/
 
@@ -810,6 +816,7 @@ header .container {
 	width: 100%;
 	height: 100%;
 	filter: brightness(0.35);
+	object-fit: cover;
 	
 	transition: filter .3s linear, transform 3s linear;
 }
@@ -878,7 +885,7 @@ header .container {
 }
 .advantages-list-item:hover .advant-icon {
 	width: 80px;
-	height: 80px;
+	/*height: 80px;*/
 	margin-bottom: 18px;
 }
 .advantages-list-item:hover .advant-list-bg {

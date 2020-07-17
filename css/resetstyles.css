@@ -6,11 +6,7 @@ html {
 *::after {
 	box-sizing: inherit;
 }
-ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
+
 h1,
 h2,
 h3,
@@ -33,8 +29,8 @@ a {
 
 body {
 	margin: 0;
-}
-body {
+	padding: 0px;
+	line-height: 1;
 	font-family:
 	system-ui,
 	-apple-system, /* Firefox supports this but not yet `system-ui` */
@@ -45,6 +41,30 @@ body {
 	sans-serif,
 	'Apple Color Emoji',
 	'Segoe UI Emoji';
+}
+/* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+
+html, body, *, form, label, textarea, select {
+	outline: 0;
 }
 /*Remove the inheritance of text transform in Edge and Firefox.
 1. Remove the inheritance of text transform in Firefox.
