@@ -85,13 +85,13 @@ header {
     margin: 0 auto 0 auto;
 }
 header .container {
-	/*position: relative;*/
+	position: relative;
 	display: flex;
 	align-items: center;
 	padding: 10px 0;
 }
 
-.sand-link {
+/*.sand-link {
 	display: inline-block;
 	height: 25px;
 	margin-right: 130px;
@@ -133,7 +133,7 @@ header .container {
 }
 .sand-link.sand-link-active .sand:after {
 	opacity: 0;
-}
+}*/
 
 /*.sand-link:hover .sand:before {
 	transform: rotate(90deg) translateX(-9px);
@@ -149,11 +149,59 @@ header .container {
 	opacity: 0;
 }*/
 
+
+.sand-link {
+	display: flex;
+    align-items: center;
+    margin-right: 130px;
+    width: 33px;
+    height: 25px;
+	z-index: 9;
+}
+.sand {
+	position: relative;
+  	display: block;
+  	width: 33px;
+  	height: 2px;
+	background: var(--sand-color);
+
+	transition: transform 250ms;
+}
+.sand:before,
+.sand:after {
+	position: absolute;
+  	display: block;
+  	content:"";
+  	width: 33px;
+  	height: 2px;
+	background: var(--sand-color);
+}
+.sand:before {
+	top: -9px;
+}
+.sand:after {
+	bottom: -9px;
+}
+
+.sand-link.sand-link-active .sand {
+	transform: rotate(-45deg);
+	background-color: #fff;
+}
+.sand-link.sand-link-active .sand:before {
+	transform: rotate(90deg);
+  	top: 0;
+	background-color: #fff;
+}
+.sand-link.sand-link-active .sand:after {
+	opacity: 0;
+}
+
+
 .menu-container {
 	position: absolute;
 	top: 0;
 	left: 0;
-	/*left: -14%;*/
+	left: -14%;
 	/*left: -210px;*/
 	transform: translateX(-100%);
 	padding: 355px 225px 0 210px;
