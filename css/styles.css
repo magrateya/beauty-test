@@ -69,7 +69,6 @@ body {
 .container {
 	max-width: 1500px;
 	width: 100%;
-	height: 100%;
 	margin: 0 auto 0 auto;
 }
 
@@ -90,66 +89,6 @@ header .container {
 	align-items: center;
 	padding: 10px 0;
 }
-
-/*.sand-link {
-	display: inline-block;
-	height: 25px;
-	margin-right: 130px;
-	z-index: 9;
-}
-.sand {
-	display: inline-block;
-	width: 33px;
-	height: 2px;
-	background: var(--sand-color);
-
-	transition: transform 250ms;
-}
-.sand:before,
-.sand:after {
-	display: block;
-	content:"";
-	width: 33px;
-	height: 2px;
-	background: var(--sand-color);
-	display: block;
-}
-.sand:before {
-	margin-top: 9px;
-}
-.sand:after {
-	margin-top: -20px;
-}
-
-.sand-link.sand-link-active .sand {
-	transform: rotate(-45deg);
-	top: 50%;
-	background-color: #fff;
-}
-.sand-link.sand-link-active .sand:before {
-	transform: rotate(90deg) translateX(-9px);
-	top: 0;
-	background-color: #fff;
-}
-.sand-link.sand-link-active .sand:after {
-	opacity: 0;
-}*/
-
-/*.sand-link:hover .sand:before {
-	transform: rotate(90deg) translateX(-9px);
-	top: 0;
-	background-color: #fff;
-}
-.sand-link:hover .sand {
-	transform: rotate(-45deg);
-	top: 50%;
-	background-color: #fff;
-}
-.sand-link:hover .sand:after {
-	opacity: 0;
-}*/
-
-
 .sand-link {
 	display: flex;
     align-items: center;
@@ -201,8 +140,7 @@ header .container {
 	position: absolute;
 	top: 0;
 	left: 0;
-	left: -14%;
-	/*left: -210px;*/
+	left: -8%;
 	transform: translateX(-100%);
 	padding: 355px 225px 0 210px;
 	height: 100vh;
@@ -220,10 +158,6 @@ header .container {
 .menu-contacts {
 	display: none;
 }
-/*.sand-link:hover + .menu-container {
-	transform: translateX(0);
-	opacity: 1;
-}*/
 .nav-list {
 	font: 300 32px/3.13 "Montserrat", sans-serif;
 	color: rgb(255, 255, 255);
@@ -300,12 +234,14 @@ header .container {
 }
 .lang-item-main {
 	position: relative;
-	display: flex;
-	align-items: baseline;
 }
 .lang-item-main > a {
-	margin-right: 8px;
+	display: flex;
+	align-items: baseline;
 	padding: 6px 0;
+}
+.lang-item-main span {
+	margin-right: 8px;
 }
 
 .lang-sub {
@@ -334,9 +270,9 @@ header .container {
 
 .hero {
   position: relative;
+  display: flex;
   max-width: 1920px;
   min-height: 100vh;
-  height: 1080px;
   margin: 0 auto 0 auto;
 }
 .hero-container {
@@ -345,7 +281,6 @@ header .container {
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
-	height: 100vh;
 }
 .hero-thumb {
 	position: absolute;
@@ -505,9 +440,6 @@ header .container {
 .char16 { transform: rotate(329deg); }
 
 .list-socio {
-/*	align-self: flex-end;
-	margin-bottom: -250px;*/
-
 	position: absolute;
 	right: 0;
 	bottom: 70px;
@@ -520,7 +452,7 @@ header .container {
 	height: 66px;
 	border: 1px solid #fff;
 	border-radius: 50%;
-	transition: color .3s linear;
+	transition: all .3s linear;
 }
 .list-socio > li:not(:last-child) {
 	margin-bottom: 22px;
@@ -539,21 +471,22 @@ header .container {
 
 .offers .container {
 	position: relative;
-	padding-top: 40px;
-	padding-bottom: 104px;
+	padding: 40px 0 104px;
 	display: flex;
-	align-items: flex-start;
 }
 .offers .container:hover .offers-img-bg {
 	transform: scale(1.1);
 	transform-origin: center;
 }
 .offers-img-bg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 	transition: all .3s linear;
 }
 .slide-box {
+	position: relative;
 	display: flex;
-	align-items: flex-start;
 	width: 100%;
 }
 .offers-img-thumb {
@@ -561,6 +494,7 @@ header .container {
 	max-width: 57;
 	overflow: hidden;
 	z-index: -1;
+	height: calc(100% - 140px);
 }
 .offers-content {
 	width: 100%;
@@ -606,18 +540,21 @@ header .container {
 .offers-content .button {
 	position: static;
     color: #fff;
+    background-color: transparent;
 }
 .progress-box {
 	position: absolute;
 	left: 0;
-	bottom: 164px;
+	bottom: 70px;
 	left: 45px;
+	transform: translateY(50%);
+	width: 40%;
 	display: flex;
 	align-items: center;
 }
 .progress-bg {
-  margin-right: 35px;
-  width: 497px;
+  width: 80%;
+  margin-right: 6%;
   height: 3px;
   background-color: var(--progress-no-active);
 }
@@ -628,6 +565,8 @@ header .container {
   background-color: var(--text-nav-current-bg-menu);
 }
 .counter {
+	width: 10%;
+	white-space: nowrap;
 	font: 500 14px/1.2 "Montserrat", sans-serif;
 	color: var(--progress-no-active);
 }
@@ -637,8 +576,9 @@ header .container {
 }
 .arrow-btn {
 	position: absolute;
-	top: 99px;
+	top: 105px;
 	right: 40px;
+	transform: translateY(-50%);
 	display: flex;
 	
 }
@@ -700,8 +640,7 @@ header .container {
 .services-title:after {
 	position: absolute;
 	left: 50%;
-	bottom: -50%;
-	/*bottom: -32px;*/
+	bottom: -32px;
 	transform: translateX(-50%);
 	content: '';
 	display: block;
@@ -745,23 +684,17 @@ header .container {
 }
 .services-list-item:hover {
 	color: var(--gold-text-color);
-	font-weight: 700;
+	/*font-weight: 700;*/
 }
 .services-list-item:hover > span:after {
 	width: calc(100% - 50px);
 	background-color: var(--gold-text-color);
 }
 
-/*.services-list-item:hover .services-submenu {
-	opacity: 1;
-	left: 100%;
-	padding: 0 95px 0 105px;
-	width: 100%;
-}*/
 .services-list-item .services-submenu.opened {
 	opacity: 1;
 	left: 100%;
-	padding: 0 95px 0 105px;
+	padding: 20px 95px 0 105px;
 	width: 100%;
 }
 .services-list-item .services-submenu {
@@ -771,16 +704,15 @@ header .container {
 	top:0;
 	width: 100%;
 
-	font: 500 18px/4 "Montserrat", sans-serif;
+	font: 500 18px/1 "Montserrat", sans-serif;
 	color: rgb(255, 255, 255);
 	text-transform: none;
-	max-height: 20em;
 	visibility: hidden;
 	transition: opacity .3s linear;
-	/*max-height: 360px;*/
+	max-height: 360px;
     overflow: auto;
 }
-/*.services-list-item .services-submenu.active,*/
+
 .services-list-item .services-submenu.opened {
 	opacity: 1;
 	left: 100%;
@@ -790,7 +722,9 @@ header .container {
 .services-list-item .services-submenu li {
 	display: flex;
 	justify-content: space-between;
-	/*padding: 15px 0;*/
+}
+.services-submenu li:not(:last-child) {
+	margin-bottom: 50px;
 }
 .services-list-item .services-submenu::-webkit-scrollbar {
 	width: 4px;
@@ -805,9 +739,7 @@ header .container {
 .video-button.golden {
 	position: absolute;
 	top: -85px;
-	left: 95%;
-    /*left: 1435px;*/
-    /*animation: buttonGolden 10s linear infinite;*/
+	/*left: 95%;*/
 }
 .video-button.golden span {
 	color: var(--gold-text-color);
@@ -856,7 +788,7 @@ header .container {
 	border: 1px solid #fff;
 	overflow: hidden;
 
-	transform: all 3s linear;
+	transition: all .3s linear;
 }
 .advant-list-bg {
 	position: absolute;
@@ -865,8 +797,9 @@ header .container {
 	height: 100%;
 	filter: brightness(0.35);
 	object-fit: cover;
+	object-position: center;
 	
-	transition: filter .3s linear, transform 3s linear;
+	transition: filter .3s linear;
 }
 .advant-list-box {
 	/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -894,7 +827,7 @@ header .container {
 	margin-bottom: 33px;
 	background-color: #fff;
 
-	transition: background-color .3s linear;
+	transition: all .3s linear;
 }
 .advantages-text {
 	font: 700 18px/1.2 "Montserrat", sans-serif;
@@ -902,7 +835,7 @@ header .container {
 	text-align: center;
 	text-transform: none;
 
-	transition: color .3s linear;
+	transition: all .3s linear;
 
 	/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 	height: 83px;
@@ -916,7 +849,7 @@ header .container {
 	height: 100%;
 	opacity: 0;
 
-	transition: opacity .3s linear;
+	transition: all .3s linear;
 }
 .advantages-list-item:hover {
 	transform: scaleY(1.23) translateY(15px);
@@ -933,12 +866,11 @@ header .container {
 }
 .advantages-list-item:hover .advant-icon {
 	width: 80px;
-	/*height: 80px;*/
+	height: 80px;
 	margin-bottom: 18px;
 }
 .advantages-list-item:hover .advant-list-bg {
 	filter: brightness(1);
-	transform: scale(1.1);
 }
 .advantages-list-item:hover .advant-icon path {
 	fill: #333333;

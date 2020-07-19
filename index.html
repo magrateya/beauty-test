@@ -78,8 +78,11 @@
 
 			<ul class="lang">
 				<li class="lang-item-main">
-					<a href="">Укр</a>
-					<img src="./img/arrow-down.svg" alt="іконка стрілка" width="12" height="6">
+					<a href="">
+						<span>Укр</span>
+						<img src="./img/arrow-down.svg" alt="іконка стрілка" width="12" height="6">
+					</a>
+					
 					<ul class="lang-sub">
 						<li><a href="">Рус</a></li>
 						<li><a href="">Eng</a></li>
@@ -109,7 +112,7 @@
 				
 				<div class="hero-title-box">
 					<p class="hero-title-spec">новий</p>
-					<h1 class="hero-title">салон <br> краси <br> у києві</h1>
+					<h1 class="hero-title">салон краси <br> у києві</h1>
 					<a href="#form" class="button scrollto">Запис онлайн</a>
 
 					<a href="" class="video-button">
@@ -162,37 +165,38 @@
 
 				<div class="slide-box">
 					<div class="offers-img-thumb">
-					<img class="offers-img-bg" src="./img/nails.jpg" alt="картинка пудрове напилення нігтів">
-				</div>
-				<div class="offers-content">
-					<b>акційна пропозиція</b>
-					<h3>пудровое напыление ногтей</h3>
-					<p>When you walk into an Aveda salon, you know it’s going to be an incredible experience. As an Aveda salon Spruce is dedicated to creating a unique experience for every guest.</p>
-					<a href="#form" class="button scrollto">Запис онлайн</a>
-				</div>
-				</div>
-
-				<div class="progress-box">
-					<div class="progress-bg">
-  						<span class="progress"></span>
+						<img class="offers-img-bg" src="./img/nails.jpg" alt="картинка пудрове напилення нігтів">
 					</div>
-					<div class="counter"><span>01</span> / 04</div>
-				</div>
+					<div class="offers-content">
+						<b>акційна пропозиція</b>
+						<h3>пудровое напыление ногтей</h3>
+						<p>When you walk into an Aveda salon, you know it’s going to be an incredible experience. As an Aveda salon Spruce is dedicated to creating a unique experience for every guest.</p>
+						<a href="#form" class="button scrollto">Запис онлайн</a>
+					</div>
+					<div class="progress-box">
+						<div class="progress-bg">
+  							<span class="progress"></span>
+						</div>
+						<div class="counter"><span>01</span> / 04</div>
+					</div>
 
-				<ul class="arrow-btn">
-					<li>
-						<a href="">
+					<ul class="arrow-btn">
+						<li>
+							<a href="">
 							<!-- <img src="./img/arrow-small.svg" alt="іконка стрілка" width="8" height="15" class="arrow-btn-icon"> -->
 							<svg  width="8" height="15" class="arrow-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256.15 490.8"><defs><style>.cls-1{fill:#787878}</style></defs><g id="Слой_2" data-name="Слой 2"><g id="Capa_1" data-name="Capa 1"><path class="cls-1" d="M3.14 237.79a10.68 10.68 0 000 15.09l234.67 234.66.26.27a10.67 10.67 0 1014.82-15.35L25.76 245.35 252.87 18.21a10.66 10.66 0 00-15.08-15.08z"/><path class="cls-1" d="M237.79 487.54L3.12 252.88a10.67 10.67 0 010-15.08L237.79 3.13a10.68 10.68 0 0115.1 15.1L25.76 245.35l227.13 227.11a10.67 10.67 0 11-15.1 15.08z"/></g></g></svg>
-						</a>
-					</li>
-					<li>
-						<a href="">
+							</a>
+						</li>
+						<li>
+							<a href="">
 							<!-- <img src="./img/arrow-big.svg" alt="іконка стрілка" width="8" height="15" class="arrow-btn-icon"> -->
 							<svg width="8" height="15" class="arrow-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256.15 490.8"><defs><style>.cls-1{fill:#333}</style></defs><g id="Слой_2" data-name="Слой 2"><g id="Capa_1" data-name="Capa 1"><path class="cls-1" d="M18.36 3.13A10.66 10.66 0 003.28 18.21l227.11 227.14L3.26 472.46a10.67 10.67 0 1014.82 15.35l.26-.27L253 252.88a10.68 10.68 0 000-15.09z"/><path class="cls-1" d="M10.81 490.68a10.66 10.66 0 01-7.55-18.22l227.13-227.11L3.26 18.23a10.68 10.68 0 0115.1-15.1L253 237.8a10.67 10.67 0 010 15.08L18.36 487.54a10.66 10.66 0 01-7.55 3.14z"/></g></g></svg>
-						</a>
-					</li>
-				</ul>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				
 			</div>
 		</section>
 
@@ -344,13 +348,16 @@
 	 		$(".menu-container").toggleClass('active'); return false;
 			});
 		});
+	// тут порядок
 	</script>
 	<script>
 		$(function(){
-			$('.lang-item-main').click(function () {
+			$('.lang-item-main > a').click(function () {
  	 			$(".lang-sub").toggleClass('active'); return false;
  	 		});
 		});
+		// ТАк как вы обращаетесь к ли а не к ссылке - язык не получится переключить, а толлько посмотреть и скрыть.
+		//ТАкже у ссылки стрелочка вниз должна быть внутри, ибо если нажмут на нее - ничего не произойдет.
 	</script>
 	<script>
 		$(function() {
@@ -360,14 +367,16 @@
 			$("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 1100); return false;
 			});
 		});
+		// Тут тоже ок
 	</script>
 	<script>
 		$(function(){
 			$('.services-list-item').click(function () {
-
+				$(".services-submenu").removeClass('opened');
 				$(this).children(".services-submenu").toggleClass('opened');
 			});
 		});
+		// Перед тем как включить сабменю, нужно выключить все старые
 	</script>
 <!-- 	<script>
 		$(function(){

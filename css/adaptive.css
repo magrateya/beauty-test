@@ -9,7 +9,7 @@
     padding: 300px 220px 0 210px;
 	}
 	.progress-bg {
-    width: 450px;
+    	width: 75%;
 	}
 	.video-button {
 		width: 120px;
@@ -17,7 +17,8 @@
 	}
 	.video-button.golden {
 		top: -35px;
-		left: 93%;
+		left: auto;
+    	right: -15px;
 	}
 	.video-button span {
 		height: 60px;
@@ -26,7 +27,9 @@
 	.bs-icon {
 		width: 50px;
 	}
-
+	.services-list-item .services-submenu.opened {
+    padding: 20px 40px 0 50px;
+	}
 }
 
 @media screen and (max-width: 1440px) {
@@ -110,39 +113,38 @@
 	/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 	.progress-box {
     left: 3%;
-    bottom: 15%;
+    bottom: 35px;
 	}
-	.progress-bg {
-    width: 350px;
- 	}
 	.offers-content {
     margin: 110px 0 0 -70px;
     padding: 88px 90px 75px 90px;
 	}
 	.offers-img-thumb {
-    height: calc(100vh - 220px);
+    height: calc(100% - 100px);
 	}
 	.arrow-btn {
     top: 55px;
 	}
-
+	.arrow-btn > li:hover {
+    transform: scale(1.5);
+	}
+	.services .container {
+    padding: 100px 80px;
+	}
  	.services-list {
     font: 300 22px/2.4 "Montserrat", sans-serif;
 	}
 	.services-list-item .services-submenu.opened {
-    padding: 0 30px 0 60px;
-	}
-	.services-list-item .services-submenu {
-    font: 400 16px/4 "Montserrat", sans-serif;
+    padding: 20px 30px 0 60px;
 	}
 	.advantages-text {
-    font: 600 16px/1.2 "Montserrat", sans-serif;
+    font: 600 18px/1.2 "Montserrat", sans-serif;
 	}
 }
 
 @media screen and (max-width: 1366px) {
 	.menu-container {
-    padding: 150px 80px 0 170px;
+    padding: 150px 195px 0 170px;
 	}
 	.nav-list {
     font-size: 20px;
@@ -173,9 +175,6 @@
 	.offers-content h3 {
     font: 400 18px/1.2 "Montserrat", sans-serif;
 	}
-	.progress-bg {
-    width: 280px;
-	}
 	.counter span {
     font: 500 16px/1.2 "Montserrat", sans-serif;
 	}
@@ -187,7 +186,9 @@
     position: relative;
     padding: 60px 60px 60px 60px;
 	}
-
+	.services-submenu li:not(:last-child) {
+    margin-bottom: 40px;
+	}
 	.advant-icon {
     width: 45px;
     height: 45px;
@@ -200,7 +201,7 @@
 
 @media screen and (max-width: 1024px) {
 	.menu-container {
-    padding: 100px 80px 0 130px;
+    padding: 100px 140px 0 130px;
 	}
 	.nav-list {
     font-size: 16px;
@@ -241,18 +242,16 @@
     width: 10px;
 	}
 	.video-button.golden {
-    top: -25px;
+    top: -20px;
+    left: auto;
+    right: -10px;
 	}
 	.bs-icon {
     width: 35px;
 	}
-
-	.progress-box {
-    left: 2%;
-    bottom: 17%;
-	}
 	.progress-bg {
-    width: 230px;
+	width: 70%;
+    /*width: 230px;*/
 	}
 	.services .container {
     padding: 40px;
@@ -265,9 +264,14 @@
     font-size: 20px;
 	}
 	.services-list-item .services-submenu.opened {
-    padding: 0 20px 0 30px;
+    padding: 15px 25px 0 40px;
+    max-height: 100%;
+    font-size: 16px;
+    font-weight: 300;
 	}
-
+	.services-submenu li:not(:last-child) {
+    margin-bottom: 30px;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -300,13 +304,22 @@
 	.contacts-item {
 		display: none;
 	}
+	.menu-container nav {
+    margin-bottom: 30px;
+	}
 	.menu-contacts {
 	display: block;
-	font-size: 12px;
+	font-size: 14px;
     color: #fff;
 	}
 	.menu-contacts-item:not(:last-child) {
-		margin-bottom: 10px;
+		margin-bottom: 15px;
+	}
+	.menu-contacts-item {
+		transition: all .3s linear;
+	}
+	.menu-contacts-item:hover {
+		color: var(--gold-text-color);
 	}
 	.contacts-tell {
     font: 400 12px/0.469 "Montserrat", sans-serif;
@@ -351,11 +364,7 @@
     font: 300 40px/1 "Montserrat", sans-serif;
 	}
 	.button {
-	font-size: 12px;
-/*    width: 100px;
-    height: 30px;
-    padding: 15px 0;*/
-/*    font: 400 10px/0 "Montserrat", sans-serif;*/
+	padding: 13px 15px;
 	}
 	.video-button {
     width: 60px;
@@ -402,28 +411,33 @@
 	width: 5px;
 	height: 10px;
 	}
+	.offers-img-thumb {
+    height: calc(100% - 80px);
+	}
 	.offers-content {
-	padding: 40px 20px 50px 20px;
-	margin: 50px 0 0 -70px;
+	padding: 40px;
+	margin: 30px 0 0 -260px;
+	max-width: 75%;
 	}
 	.offers-content b {
 	margin-bottom: 40px;	
-    font: 500 14px/1.2 "Montserrat", sans-serif;
+    font: 500 16px/1.2 "Montserrat", sans-serif;
 	}
 	.offers-content b:after {
     bottom: -20px;
 	}
 	.offers-content h3 {
 	margin-bottom: 40px;
-    font: 400 14px/1.2 "Montserrat", sans-serif;
+    font: 400 16px/1.2 "Montserrat", sans-serif;
     }
     .offers-content p {
-    font: 300 12px/1.2 "Montserrat", sans-serif;
-	}
+    margin-bottom: 55px;
+    }
 	.arrow-btn {
-    left: 40px;
-    top: 82%;
-    /*bottom: 50px;*/
+    left: 10px;
+    top: auto;
+    bottom: 40px;
+    transform: translateY(50%);
 	}
 
 	/*секція послуги*/
@@ -438,11 +452,14 @@
 	.services-list-item:not(:last-child) > span:after {
     left: 30px;
 	}
-	
-	.services-list-item .services-submenu {
-	padding: 0 35px 0 40px;
-    max-height: 18em;
-    font: 400 12px/3 "Montserrat", sans-serif;
+	.services-submenu li:not(:last-child) {
+    margin-bottom: 20px;
+	}
+
+	.services-list-item .services-submenu.opened {
+    padding: 10px 10px 0 10px;
+    font-size: 14px;
+    font-weight: 200;
 	}
 	
 	/*переаваги*/
@@ -460,11 +477,6 @@
 	.advant-list-box {
     padding: 50px 30px 40px 30px;
 	}
-	.advant-icon {
-	margin-bottom: 25px;
-    width: 35px;
-    height: 35px;
-	}
 	.advant-line {
 	margin-bottom: 30px;
     width: 70px;
@@ -475,7 +487,17 @@
     font: 600 14px/1.2 "Montserrat", sans-serif;
 	}
 	.advantages-list-item:hover {
-    transform: scale(1);
+    transform: none;
+	}
+	.advantages-list-item:hover .advant-icon{
+		margin-bottom: 33px;
+    width: 55px;
+    height: 55px;
+	}
+	.advant-icon {
+    margin-bottom: 33px;
+    width: 55px;
+    height: 55px;
 	}
 }
 
@@ -490,9 +512,7 @@
 	transform: translateY(-100%);
 	padding: 70px 40px 0 40px;
 	}
-	.menu-container nav {
-    margin-bottom: 30px;
-	}
+	
 	.nav-list {
     font: 300 16px/2 "Montserrat", sans-serif;
 	}
@@ -501,15 +521,6 @@
 	margin-right: 0;
 	flex-grow: 0;
 	}
-	/*.menu-contacts {
-	display: block;
-	font-size: 12px;
-    color: #fff;
-	}
-	.menu-contacts-item:not(:last-child) {
-		margin-bottom: 10px;
-	}*/
-
 	.contacts > li:not(:last-child) {
     margin-right: 0;
 }
@@ -561,10 +572,13 @@
 	.button {
 	padding: 10px;
     font-size: 10px;
+    background-color: #f1f1f1;
+    opacity: 0.588;
 	}
 	.video-button {
 		width: 50px;
 		height: 50px;
+		right: -60px;
 	}
 	.play-icon {
 		width: 6px;
@@ -574,19 +588,25 @@
 	}
 
 	.video-button.golden {
-		display: none;
-/*    top: 0;
-    left: 85%;*/
+    top: -15px;
+    left: auto;
+    right: 5px;
 	}
-	
+	.bs-icon {
+	width: 20px;
+	}
+	.video-button span {
+    height: 23px;
+    font-weight: 300;
+	}
 	
 	.offers-img-thumb {
-    height: calc(100vh - 260px);
+    display: none;
 	}
 	.offers-content {
-	max-width: 67%;
+	max-width: 100%;
     padding: 40px 20px 40px 20px;
-    margin: 50px 0 0 -120px;
+    margin: 0;
 	}
 	.offers-content b {
     margin-bottom: 20px;
@@ -626,25 +646,27 @@
     margin-bottom: 25px;
     font-size: 18px;
 	}
+	.services-title:after {
+    bottom: -15px;
+	}
 	.services-list {
     width: 100%;
 	}
 	.services-list-item {
-		position: relative;
+	position: relative;
 	}
 	.services-list-item .services-submenu {
-    /* padding: 0 35px 0 40px; */
     left: 0;
-    max-height: 25em;
     font-size: 12px;
 	}
 	.services-list-item .services-submenu.opened {
+	position: relative;
     width: 100%;
     top: 100%;
     left: 0;
     z-index: 8;
-    padding: 0 10px;
-    background-color: var(--text-nav-current-bg-menu);
+    padding: 10px 0px;
+    background-color: transparent;
 	}
 
 	.advantages-list {
