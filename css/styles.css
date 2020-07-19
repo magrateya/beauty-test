@@ -377,7 +377,7 @@ header .container {
   display: inline-block;
   width: 140px;
   height: 140px;
-  transition: all 10s linear;
+  /*transition: all 10s linear;*/
 }
 .video-button span {
   position: absolute;
@@ -385,14 +385,15 @@ header .container {
   top: 0;
   transform-origin: bottom center;
   height: 70px;
+  width: 1px;
   font: 500 22px/0.44 "Montserrat", sans-serif;
   color: #fff;
 }
 .video-button:hover {
-	animation: rotateButton 5s linear infinite;
+	animation: rotateButton 10s linear infinite;
 }
 
-/*@keyframes rotateButton {
+@keyframes rotateButton {
   0% {
     transform: rotate3d(0, 0, 1, 0deg);
   }
@@ -400,22 +401,27 @@ header .container {
   100% {
     transform: rotate3d(0, 0, 1, 360deg);
   }
-}*/
+}
 .video-button:hover > .play-icon {
-	/*transform: rotate(-300deg) translate(0, -50%);*/
-	animation: rotateIcon 5s linear infinite;
+	left: 45%;
+	top: 45%;
+	transform: rotate(-300deg) translate(0, -50%);
+
+	animation: rotateIcon 10s linear infinite;
 }
 .play-icon {
+	width: 15px;
+	height: 15px;
 	position: absolute;
     left: 50%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
 
     /*transition: transform 5s linear;*/
     
 }
 
-/*@keyframes rotateIcon {
+@keyframes rotateIcon {
   0% {
     transform: rotate3d(0, 0, 1, 0deg);
   }
@@ -423,7 +429,7 @@ header .container {
   100% {
     transform: rotate3d(0, 0, 1, -360deg);
   }
-}*/
+}
 
 .char1 { transform: rotate(-1deg); }
 .char2 { transform: rotate(19deg); }
@@ -743,20 +749,22 @@ header .container {
 	position: absolute;
 	top: -85px;
 	/*left: 95%;*/
+
+
+    animation: buttonGolden 25s linear infinite;
 }
 .video-button.golden span {
 	color: var(--gold-text-color);
 }
 .bs-icon {
 	position: absolute;
-	left: 55%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+	left: 27.5%;
+    top: 38%;
+    /*transform: translate(-50%, -50%);*/
 
-    /*animation: 10s linear infinite;
-    animation-name: rotateIconBs, transformIconBs;*/
+    animation: rotateIconBs 25s linear infinite;
 }
-/*@keyframes buttonGolden {
+@keyframes buttonGolden {
   0% {
     transform: rotate3d(0, 0, 1, 0deg);
   }
@@ -774,7 +782,7 @@ header .container {
     transform: rotate3d(0, 0, 1, -360deg);
   }
 }
-*/
+
 
 /*секція переваги*/
 
