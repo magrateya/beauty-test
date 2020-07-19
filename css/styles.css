@@ -295,8 +295,11 @@ header .container {
 	filter: brightness(0.45);
 }
 .hero-thumb video {
+	width: 100%;
 	height: 100%;
 	filter: brightness(0.45);
+	object-fit: cover;
+    object-position: center;
 }
 .hero-title-spec {
 	position: absolute;
