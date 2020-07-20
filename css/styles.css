@@ -550,6 +550,12 @@ header .container {
 	position: static;
     color: #fff;
     background-color: transparent;
+
+    transition: all .3s linear;
+}
+.offers-content .button:hover {
+	color: #fff;
+	background-color: var(--gold-color);
 }
 .progress-box {
 	position: absolute;
