@@ -1,21 +1,28 @@
-:root {
-	--sand-color: #0f0f0f;
-	--contacts-text: #dcdcdc;
-	--gold-text-color: #e7c127;
-	--burger-cross: #0f0f0f;
-	--text-nav-current-bg-menu: #333333;
-	--video-button: #e6e5e4;
-	--socio-border: #8d8b8b;
-	--close-cross: #ececec;
-	--text-color: #918f8f;
-	--big-arrow-border: #939393;
-	--small-arrow-border: #e8e8e8;
-	--progress-no-active: #eeeeee;
-	--progress-text-no-active: #a7a5a5;
-	--icons-no-active: #adadad;
-	--gold-color: rgb(231, 193, 39);
-} 
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Light.otf") format("otf"),
+    url("../fonts/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Medium.otf") format("otf"),
+    url("../fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.otf") format("otf"),
+    url("../fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Black.otf") format("otf"),
+    url("../fonts/Montserrat-Black.ttf") format("truetype");
+  font-weight: 900;
+}
 html {
 	box-sizing: border-box;
 }
@@ -102,7 +109,7 @@ header .container {
   	display: block;
   	width: 33px;
   	height: 2px;
-	background: var(--sand-color);
+	background: #0f0f0f;
 
 	transition: transform 250ms;
 }
@@ -113,7 +120,7 @@ header .container {
   	content:"";
   	width: 33px;
   	height: 2px;
-	background: var(--sand-color);
+	background: #0f0f0f;
 }
 .sand:before {
 	top: -9px;
@@ -142,9 +149,11 @@ header .container {
 	left: 0;
 	left: -8%;
 	transform: translateX(-100%);
-	padding: 355px 225px 0 210px;
+	display: flex;
+	align-items: center;
+	padding: 0 225px 0 210px;
 	height: 100vh;
-	background-color: var(--text-nav-current-bg-menu);
+	background-color: #333333;
 	opacity: 0;
 	transition: all .3s linear;
 }
@@ -168,7 +177,7 @@ header .container {
 	transition: all .3s linear;
 }
 .nav-list-item:hover {
-	color: var(--gold-text-color);
+	color: #e7c127;
 	font-weight: 700;
 }
 
@@ -183,7 +192,7 @@ header .container {
 	justify-content: flex-end;
 	margin-right: 104px;
 	font: 100 16px/0.586 "Montserrat", sans-serif;
-	color: var(--contacts-text);
+	color: #dcdcdc;
 }
 
 .contacts > li:not(:last-child){
@@ -193,7 +202,7 @@ header .container {
 	display: flex;
 	align-items: center;
 	font: 700 20px/0.469 "Montserrat", sans-serif;
-	color: var(--gold-text-color);
+	color: #e7c127;
 }
 .contacts-tell img {
 	margin-right: 15px;
@@ -225,7 +234,7 @@ header .container {
 	transition: color 0.3s linear;
 }
 .contacts > li:hover:not(:first-child) {
-	color: var(--gold-text-color);
+	color: #e7c127;
 }
 
 .lang {
@@ -265,7 +274,6 @@ header .container {
 	visibility: visible;
 }
 
-
 /*герой*/
 
 .hero {
@@ -286,6 +294,7 @@ header .container {
 	position: absolute;
 	right: 0;
 	max-width: 61%;
+	width: 100%;
 	height: 100vh;
 	overflow: hidden;
 }
@@ -312,27 +321,7 @@ header .container {
 	font-weight: 900;
 	color: #f1f1f1;
 }
-.hero-title-spec:before{
-	content: '';
-	position: absolute;
-    bottom: 220px;
-    left: -150px;
-	display: block;
-	width: 129px;
-	height: 2px;
-	background-color: var(--text-nav-current);
-	background-color: rgb(51, 51, 51);
-}
-.hero-title-spec:after {
-	content: '';
-	position: absolute;
-    bottom: 220px;
-    left: 600px;
-	display: block;
-	width: 212px;
-	height: 2px;
-	background-color: rgb(51, 51, 51);
-}
+
 .hero-title-box {
 	position: relative;
 	width: 52%;
@@ -356,29 +345,52 @@ header .container {
 	color: rgb(51, 51, 51);
   	text-transform: uppercase;
 }
+.hero-title:before, 
+.hero-title:after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 2px;
+	
+	background-color: rgb(51, 51, 51);
+}
+.hero-title:before {
+	bottom: calc(100% + 10px);
+    left: 50px;
+	height: 129px;
+}
+.hero-title:after {
+	left: 50px;
+    top: calc(100% + 205px);
+	height: 212px;
+}
 .button {
 	display: inline-block;
-	border: 1px solid var(--gold-color);
+	border: 1px solid #e7c127;
 	text-align: center;
 	padding: 22px 53px;
 	font: 700 16px/0.586 "Montserrat", sans-serif;
-	color: var(--text-nav-current-bg-menu);
+	color: #333333;
 	
 	transition: color 0.3s linear, background-color 0.3s linear;
 }
 .button:hover {
 	color: #fff;
-	background-color: var(--gold-text-color);
+	background-color: #e7c127;
 }
 .video-button {
   position: absolute;
   right: -40px;
   bottom: -10px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 140px;
   height: 140px;
-  /*transition: all 10s linear;*/
-}
+	
+  transition: transform 10s linear;
+
+ }
 .video-button span {
   position: absolute;
   left: 50%;
@@ -390,10 +402,11 @@ header .container {
   color: #fff;
 }
 .video-button:hover {
-	animation: rotateButton 10s linear infinite;
+	transform: rotateZ(300deg);
+	/*animation: rotateButton 10s linear infinite forwards;*/
 }
 
-@keyframes rotateButton {
+/*@keyframes rotateButton {
   0% {
     transform: rotate3d(0, 0, 1, 0deg);
   }
@@ -401,27 +414,24 @@ header .container {
   100% {
     transform: rotate3d(0, 0, 1, 360deg);
   }
-}
+}*/
+
 .video-button:hover > .play-icon {
 	left: 45%;
 	top: 45%;
-	transform: rotate(-300deg) translate(0, -50%);
 
-	animation: rotateIcon 10s linear infinite;
+	transform: rotateZ(-300deg);
+
+	/*animation: rotateIcon 10s linear infinite forwards;*/
 }
 .play-icon {
 	width: 15px;
 	height: 15px;
-	position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+	transition:  transform 10s linear;
 
-    /*transition: transform 5s linear;*/
-    
 }
 
-@keyframes rotateIcon {
+/*@keyframes rotateIcon {
   0% {
     transform: rotate3d(0, 0, 1, 0deg);
   }
@@ -429,7 +439,7 @@ header .container {
   100% {
     transform: rotate3d(0, 0, 1, -360deg);
   }
-}
+}*/
 
 .char1 { transform: rotate(-1deg); }
 .char2 { transform: rotate(19deg); }
@@ -467,13 +477,13 @@ header .container {
 	margin-bottom: 22px;
 }
 .link-socio:hover {
-	border: 1px solid var(--gold-text-color);
+	border: 1px solid #e7c127;
 }
 .link-socio svg path {
 	transition: fill .3s linear;
 }
 .link-socio:hover svg path {
-	fill: var(--gold-text-color);
+	fill: #e7c127;
 }
 
 /*секція акційні пропозиції*/
@@ -514,7 +524,7 @@ header .container {
 	align-items: center;
 	justify-content: center;
 	padding: 138px 140px 125px 140px;
-	background-color: var(--text-nav-current-bg-menu);
+	background-color: #333333;
 	text-align: center;
 }
 .offers-content b {
@@ -555,7 +565,7 @@ header .container {
 }
 .offers-content .button:hover {
 	color: #fff;
-	background-color: var(--gold-color);
+	background-color: #e7c127;
 }
 .progress-box {
 	position: absolute;
@@ -571,23 +581,23 @@ header .container {
   width: 80%;
   margin-right: 6%;
   height: 3px;
-  background-color: var(--progress-no-active);
+  background-color: #eeeeee;
 }
 .progress {
   display: block;
   height: 100%;
   width: 25%;
-  background-color: var(--text-nav-current-bg-menu);
+  background-color: #333333;
 }
 .counter {
 	width: 10%;
 	white-space: nowrap;
 	font: 500 14px/1.2 "Montserrat", sans-serif;
-	color: var(--progress-no-active);
+	color: #eeeeee;
 }
 .counter span {
 	font: 500 20px/1.2 "Montserrat", sans-serif;
-	color: var(--text-nav-current-bg-menu);
+	color: #333333;
 }
 .arrow-btn {
 	position: absolute;
@@ -648,7 +658,7 @@ header .container {
 	position: relative;
 	margin-bottom: 115px;
 	font: 700 25px/1.2 "Montserrat", sans-serif;
-	color: var(--gold-text-color);
+	color: #e7c127;
 	text-transform: uppercase;
 	text-align: center;
 }
@@ -698,12 +708,12 @@ header .container {
 	transition: color .3s linear;
 }
 .services-list-item:hover {
-	color: var(--gold-text-color);
+	color: #e7c127;
 	/*font-weight: 700;*/
 }
 .services-list-item:hover > span:after {
 	width: calc(100% - 50px);
-	background-color: var(--gold-text-color);
+	background-color: #e7c127;
 }
 
 .services-list-item .services-submenu.opened {
@@ -754,21 +764,17 @@ header .container {
 .video-button.golden {
 	position: absolute;
 	top: -85px;
-	/*left: 95%;*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-
-    animation: buttonGolden 25s linear infinite;
+    animation: buttonGolden 25s linear infinite forwards;
 }
 .video-button.golden span {
-	color: var(--gold-text-color);
+	color: #e7c127;
 }
 .bs-icon {
-	position: absolute;
-	left: 27.5%;
-    top: 38%;
-    /*transform: translate(-50%, -50%);*/
-
-    animation: rotateIconBs 25s linear infinite;
+    animation: rotateIconBs 25s linear infinite forwards;
 }
 @keyframes buttonGolden {
   0% {
@@ -788,7 +794,6 @@ header .container {
     transform: rotate3d(0, 0, 1, -360deg);
   }
 }
-
 
 /*секція переваги*/
 
@@ -825,7 +830,7 @@ header .container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 123px 48px 60px 48px;
+	padding: 123px 35px 60px;
 }
 .advant-icon {
 	margin-bottom: 33px;

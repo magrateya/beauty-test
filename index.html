@@ -70,7 +70,7 @@
 					<a href="viber://chat?number=%2B380733231855" target="_blank">Viber</a>
 					</li>
 				<li class=" contacts-item contacts-teleg-item">
-					<a href="https://telegram.im/@beauty_space" target="_blank">Telegram</a>
+					<a href="https://telegram.im/@beauty_space_salon" target="_blank">Telegram</a>
 				</li>
 				<li class="contacts-item">
 					<a href="https://wa.me/380733231855" target="_blank">WhatsApp</a>
@@ -98,16 +98,18 @@
 		<!-- герой -->
 		<section class="hero">
 			<div class="hero-thumb">
+
+
+
 				<video poster="./img/hero.jpg" 
 				
-				autoplay="play" 
+				 
   				loop muted="" 
-  				preload="auto" playsinline>
-					<source src="./img/video.mp4" type="video/mp4">
-					<source src="./img/video.ogg" type="video/ogg">
-					<source src="./img/video.webm" type="video/webm">
+  				preload="auto" playsinline autoplay="">
+					<source src="./img/vid_alt.mp4" type="video/mp4">
+					
 				</video>
-			
+		
 			</div>
 			<div class="container hero-container">
 				
@@ -118,7 +120,6 @@
 
 					<a href="" class="video-button">
 						
-					<!-- 	<svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 447.99 512.02"><g data-name="Слой 2"><path d="M424.4 214.67L72.4 6.57C43.8-10.33 0 6.07 0 47.87V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="#fff" data-name="Слой 1"/></g></svg> -->
 						<img src="./img/play.svg" alt="" width="14" height="15" class="play-icon">
   						<span class="char1">s</span>
   						<span class="char2">p</span>
@@ -187,13 +188,12 @@
 					<ul class="arrow-btn">
 						<li>
 							<a href="">
-							<!-- <img src="./img/arrow-small.svg" alt="іконка стрілка" width="8" height="15" class="arrow-btn-icon"> -->
+						
 							<svg  width="8" height="15" class="arrow-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256.15 490.8"><defs><style>.cls-1{fill:#787878}</style></defs><g id="layer2" data-name="layer1"><g><path class="cls-1" d="M3.14 237.79a10.68 10.68 0 000 15.09l234.67 234.66.26.27a10.67 10.67 0 1014.82-15.35L25.76 245.35 252.87 18.21a10.66 10.66 0 00-15.08-15.08z"/><path class="cls-1" d="M237.79 487.54L3.12 252.88a10.67 10.67 0 010-15.08L237.79 3.13a10.68 10.68 0 0115.1 15.1L25.76 245.35l227.13 227.11a10.67 10.67 0 11-15.1 15.08z"/></g></g></svg>
 							</a>
 						</li>
 						<li>
 							<a href="">
-							<!-- <img src="./img/arrow-big.svg" alt="іконка стрілка" width="8" height="15" class="arrow-btn-icon"> -->
 							<svg width="8" height="15" class="arrow-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256.15 490.8"><defs><style>.cls-1{fill:#333}</style></defs><g><g><path class="cls-1" d="M18.36 3.13A10.66 10.66 0 003.28 18.21l227.11 227.14L3.26 472.46a10.67 10.67 0 1014.82 15.35l.26-.27L253 252.88a10.68 10.68 0 000-15.09z"/><path class="cls-1" d="M10.81 490.68a10.66 10.66 0 01-7.55-18.22l227.13-227.11L3.26 18.23a10.68 10.68 0 0115.1-15.1L253 237.8a10.67 10.67 0 010 15.08L18.36 487.54a10.66 10.66 0 01-7.55 3.14z"/></g></g></svg>
 							</a>
 						</li>
@@ -272,6 +272,7 @@
 					</ul>
 
 					<a href="" class="video-button golden">
+						
 						<img src="./img/bs.png" alt="" class="bs-icon">
   						<span class="char1">s</span>
   						<span class="char2">p</span>
@@ -379,14 +380,16 @@
 			});
 		});
 	</script>
-	<script>
+
+	<!-- <script>
 		$(function(){
 			$('.video-button').click(function() {
-				$('video').attr('autoplay', 'play'); return false;
+
+				$('video').removeAttr('autoplay', play);
+				$('video').attr('autoplay', play); return false;
 			});
 		});
-	</script>
-
+	</script> -->
 
 
 </body>
